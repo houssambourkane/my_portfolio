@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Email') {
             steps {
-                emailext body: 'There has been some changed committed to the repository recently.', subject: 'New changement on the repo', to: 'houssambourkane@gmail.com'
+                emailext body: 'There has been some changed committed to the repository recently.', subject: 'New changement on the repo', to: 'houssambourkane@zohomail.com'
 
             }
         }
