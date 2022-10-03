@@ -2,13 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Ok') {
             steps {
-                sshagent(credentials : ['ssh-key-portfolio']) {
-                    sh 'ssh -tt -o StrictHostKeyChecking=no root@10.12.177.248'
-                    sh 'env'
-                }
+                echo "Ok"
             }
+        }
+    }
+    post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
 }
