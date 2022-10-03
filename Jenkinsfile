@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sshagent(credentials : ['remote-server-ssh-key']) {
+                sshagent(credentials : ['ssh-key-portfolio']) {
                     sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 uptime'
                     sh 'ssh -v root@10.12.177.248'
                 }
