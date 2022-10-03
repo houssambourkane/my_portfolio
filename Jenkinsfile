@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Email') {
             steps {
-                emailext body: 'Check of the repository is made every minute.', subject: 'Check', to: 'houssambourkane@zohomail.com'
-
+                emailext body: 'Your repository has been modified recently !.', subject: 'Repository trigger notification', to: 'houssambourkane@zohomail.com'
             }
         }
     }
