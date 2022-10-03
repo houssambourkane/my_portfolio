@@ -7,10 +7,15 @@ pipeline {
                 echo "Ok"
             }
         }
-    }
-    post {
-        always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+        stage('Email') {
+            steps {
+                emailext body: 'There has been some changed committed to the repository recently.', subject: 'New changement on the repo', to: 'houssambourkane@gmail.com'
+
+            }
         }
     }
+//     post {
+//         always {
+//         }
+//     }
 }
