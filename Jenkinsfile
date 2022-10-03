@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls /home/houss/inception/srcs'
+                sh 'echo hello'
             }
         }
     }
