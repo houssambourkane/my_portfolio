@@ -9,8 +9,4 @@ pipeline {
             }
         }
     }
-//     post {
-//         always {
-//         }
-//     }
 }
