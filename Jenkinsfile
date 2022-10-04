@@ -10,7 +10,7 @@ pipeline {
         stage('Pushing') {
             steps {
                 sshagent(credentials : ['remote-server-ssh-key']) {
-                    sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 make reload_website -C /home/houss/inception/'
+                    sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 make reload_website -C /home/hbourkan/inception/'
                 }
             }
         }
