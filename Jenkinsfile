@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sshagent(credentials : ['remote-server-ssh-key']) {
                     sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 cd /home/houss/inception'
-                    sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 make re1'
+                    sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 make re'
                 }
             }
         }
