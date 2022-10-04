@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Pushing') {
             steps {
-                sshagent(credentials : ['remote-server-ssh-key'] {
+                sshagent(credentials : ['remote-server-ssh-key']) {
                     sh 'ssh -o StrictHostKeyChecking=no root@10.12.177.248 touch /home/houss/inception/l.c'
                 }
             }
